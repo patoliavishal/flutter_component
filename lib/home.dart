@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_component/component/radiocheckbutton.dart';
+import 'package:flutter_component/component/radioncheckbutton.dart';
+import 'package:flutter_component/component/raisednbottomsheet.dart';
 import 'package:flutter_component/component/textfield.dart';
 import 'package:flutter_component/grid.dart';
 import 'package:flutter_component/list.dart';
@@ -13,9 +14,9 @@ class _HomePageState extends State<HomePage> {
   int _selectedTabIndex = 0;
 
   static List<String> dynamicList = [
-    "TextField",
-    "RadioButton & CheckBox",
-    "RaisedButton",
+    "Text Field",
+    "Radio Button & Check Box",
+    "Raised Button & Bottom Sheet",
     "ImageView",
     "GalleryView"
   ];
@@ -46,7 +47,11 @@ class _HomePageState extends State<HomePage> {
                 Navigator.push(context, MaterialPageRoute(builder: (context) {
                   return RadioCheckPage();
                 }));
-              } else if (index == 2) {}
+              } else if (index == 2) {
+                Navigator.push(context, MaterialPageRoute(builder: (context) {
+                  return RaisedBottomPage();
+                }));
+              }
             },
           ),
         );
