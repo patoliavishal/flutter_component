@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_component/component/imagegallery.dart';
 import 'package:flutter_component/component/radioncheckbutton.dart';
 import 'package:flutter_component/component/raisednbottomsheet.dart';
 import 'package:flutter_component/component/textfield.dart';
@@ -18,7 +19,6 @@ class _HomePageState extends State<HomePage> {
     "Radio Button & Check Box",
     "Raised Button & Bottom Sheet",
     "ImageView",
-    "GalleryView"
   ];
 
   List _pages = [
@@ -50,6 +50,10 @@ class _HomePageState extends State<HomePage> {
               } else if (index == 2) {
                 Navigator.push(context, MaterialPageRoute(builder: (context) {
                   return RaisedBottomPage();
+                }));
+              } else if (index == 3) {
+                Navigator.push(context, MaterialPageRoute(builder: (context) {
+                  return ImageGalleryPage();
                 }));
               }
             },
